@@ -1,0 +1,133 @@
+/* *------------------------------------------------------ Configuraciones Generales ---------------------------------- */
+
+@font-face{
+    font-family: 'Playfair';
+    src: url('../assets/font/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Playfair', sans-serif;
+    background-color:  #a3a198 ;
+}
+
+/* * ----------------------------------------------------------------------------------------------------------- */
+
+/* ? ------------------------------------------------- Cabecera --------------------------------------------------- */
+
+header{
+    text-align: center;
+    background-color: #5c5a55;
+}
+
+header img {
+    width: 20rem; /* Rem es una medida relativa, 1rem equivale a 16px */
+}
+/* ? --------------------------------------------------------------------------------------------------------------- */
+
+/* TODO: --------------------------------------------------- Contenido Principal ------------------------------------ */
+
+/* --- Contenedor Principal de Pokemons ---------- */
+    #pokemons {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+    
+    .card {
+    text-align: center;
+    border: 0.8rem solid white;
+    border-radius: 15%;
+    background-color: #72F2D8;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    }
+
+    .card:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        color: black;
+    }
+
+    .car__img {
+        width: 15rem;
+    }
+}
+/* ------------------------------- */
+
+/* Estilos del detalle de la tarjeta */
+.card__detail {
+    border-radius: 5%;
+    border: 0.8rem solid white;
+}
+/* --------------------------------- */
+
+/* --- Botones de paginar -------- */
+.pagination{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.pagination__item {
+    margin: 1rem;
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.3 ease;
+}
+.pagination__item:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* ------------------------------- */
+
+/* TODO: ------------------------------------------------------------------------------------------------------------- */
+/* ? ------------------------------------------------------ Pie de Página ---------------------------------------------------------- */
+footer {
+    text-align: center;
+    font-size: 1rem;
+    background-color: #5c5a55;
+    color: white;
+}
+/* ? ------------------------------------------------------ Pie de Página ---------------------------------------------------------- */
+/* ----------------------------------------------------------------------- Media Queries ----------------------------------*/
+@media (width <= 320px) {
+    #pokemons {
+    grid-template-columns: repeat(1, 15rem);
+    }
+}
+
+@media (width >= 768px) {
+    #pokemons {
+    grid-template-columns: repeat(2, 15rem);
+    }
+}
+
+@media (width >= 910px) {
+    #pokemons {
+    grid-template-columns: repeat(3, 15rem);
+    }
+}
+
+@media (width >= 1024px) {
+    #pokemons {
+    grid-template-columns: repeat(4, 15rem);
+    }
+}
+
+@media (width >= 1440px) {
+    #pokemons {
+    grid-template-columns: repeat(5, 15rem);
+    }
+}
+
+@media (width >= 2560px) {
+    #pokemons {
+    grid-template-columns: repeat(8, 15rem);
+    }
+}
+/* ---------------------------------------------------------------------------------------------------------*/
